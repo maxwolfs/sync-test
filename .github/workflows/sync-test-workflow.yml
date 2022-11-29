@@ -11,6 +11,9 @@ jobs:
   get-repos-list:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the saurus repo (B)
+        uses: actions/checkout@v3
+
       - name: Run read-yaml action
         id: yaml-data
         uses: jbutcher5/read-yaml@main      
@@ -33,6 +36,9 @@ jobs:
     steps: 
       - name: echo repos
         run: echo "${{ matrix.repos }}"
+
+      - name: Checkout the saurus repo (B)
+        uses: actions/checkout@v3
   
       # - name: Clone repo A which is about to be synchronized
       #   uses: sudosubin/git-clone-action@v1.0.1
