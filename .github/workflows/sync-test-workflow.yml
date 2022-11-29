@@ -55,12 +55,13 @@ jobs:
         run: |
           mkdir $(pwd)/docs/${{matrix.repos.name}} || true
           printf $(pwd)
-          printf "ls"
+
+      - name: deub
+        run: ls -la
 
       - name: copy docs content from A to B
         run: |
           cp -r $(pwd)/repo_to_be_edited/docs/* $(pwd)/docs/${{matrix.repos.name}}
-          
           
       - name: remove repo A
         run: |
