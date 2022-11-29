@@ -25,6 +25,7 @@ jobs:
         run: |
           REPOS=$(echo "${{ steps.yaml-data.outputs.data }}" | sed 's/ //g')
           echo "::set-output name=matrix::$REPOS"
+          echo "$REPOS"
 
 
     outputs:
