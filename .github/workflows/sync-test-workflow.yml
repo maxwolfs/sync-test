@@ -34,7 +34,7 @@ jobs:
     steps:
     - id: set-matrix
       run: |
-        JSON=$(cat ./your.json)
+        JSON=$(cat ./repos.json)
         echo "::set-output name=matrix::${JSON//'%'/'%25'}"
 
   sync_repos:
