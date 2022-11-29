@@ -1,14 +1,14 @@
 [
     {
-        "name": "openstack-image-manager",
-        "link": "https://github.com/osism/openstack-image-manager.git"
+       \"name\": \"openstack-image-manager\",
+        \"link\": \"https://github.com/osism/openstack-image-manager.git\"
     },
     {
-        "name": "testbed",
-        "link": "https://github.com/osism/testbed.git"
+        \"name\": \"testbed\",
+        \"link\": \"https://github.com/osism/testbed.git\"
     },
     {
-        "name": "scs-docs",
-        "link": "https://github.com/SovereignCloudStack/Docs.git"
+        \"name\": \"scs-docs\",
+        \"link\": \"https://github.com/SovereignCloudStack/Docs.git\"
     }
 ]
