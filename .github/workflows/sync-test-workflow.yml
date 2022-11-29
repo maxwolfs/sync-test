@@ -67,6 +67,8 @@ jobs:
         run: |
           rm -rf $(pwd)/repo_to_be_edited/
 
+  commit_changes:
+    needs: sync_repos
       - name: commit and push B
         uses: EndBug/add-and-commit@v9
         with:
