@@ -19,9 +19,8 @@ jobs:
           key-path: '["repos"]'
 
       - name: Set Matrix
-        outputs:
-          matrix: 
-            repos: ${{ steps.yaml-data.outputs.data }}
+    outputs:
+      matrix: ${{ steps.yaml-data.outputs.data.repos }}
         run: echo "${{ matrix.repos }}"
 
   sync-repos:
