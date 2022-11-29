@@ -1,5 +1,11 @@
-{
-  "repo1": "https://github.com/osism/openstack-image-manager.git",
-  "repo2": "https://github.com/osism/testbed.git",
-  "repo3": "https://github.com/SovereignCloudStack/Docs.git"
-}
+[
+  {
+    "repo1": "https://github.com/osism/openstack-image-manager.git"
+  },
+  {
+    "repo2": "https://github.com/osism/testbed.git"
+  },
+  {
+    "repo3": "https://github.com/SovereignCloudStack/Docs.git"
+  }
+]
