@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Decisions/status-page-comparison",
+  "id": "scs-docs/Decisions/status-page-comparison",
+  "title": "status-page-comparison",
+  "description": "|                                          | CachetHQ  | ClearStatus | ciao | cState | Gatus | Issue Status | statusfy |",
+  "source": "@site/docs/scs-docs/Decisions/status-page-comparison.md",
+  "sourceDirName": "scs-docs/Decisions",
+  "slug": "/scs-docs/Decisions/status-page-comparison",
+  "permalink": "/docs/scs-docs/Decisions/status-page-comparison",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Decisions/status-page-comparison.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Proposal for documentation for Keycloak to Keycloak Federation (WebSSO)",
+    "permalink": "/docs/scs-docs/Decisions/intra-SCS-federation-setup-description-for-osism-doc-operations"
+  },
+  "next": {
+    "title": "Design-Docs",
+    "permalink": "/docs/scs-docs/Design-Docs/"
+  }
+}

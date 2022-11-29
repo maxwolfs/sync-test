@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation",
+  "id": "scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation",
+  "title": "Identity Federation in SCS",
+  "description": "Keystone to Keycloak Federation",
+  "source": "@site/docs/scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation.md",
+  "sourceDirName": "scs-docs/Design-Docs/IAM-federation",
+  "slug": "/scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation",
+  "permalink": "/docs/scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Helm Charts vs. Operators: When to Use?",
+    "permalink": "/docs/scs-docs/Design-Docs/Helm-vs-Operators"
+  },
+  "next": {
+    "title": "SCS Image Metadata Proposal",
+    "permalink": "/docs/scs-docs/Design-Docs/Image-Properties-Spec"
+  }
+}

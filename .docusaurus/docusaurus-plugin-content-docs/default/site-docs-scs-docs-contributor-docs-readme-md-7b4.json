@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Contributor-Docs/README",
+  "id": "scs-docs/Contributor-Docs/README",
+  "title": "Community",
+  "description": "Entrypoint for getting onboarded.",
+  "source": "@site/docs/scs-docs/Contributor-Docs/README.md",
+  "sourceDirName": "scs-docs/Contributor-Docs",
+  "slug": "/scs-docs/Contributor-Docs/",
+  "permalink": "/docs/scs-docs/Contributor-Docs/",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Contributor-Docs/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SCS Documentation",
+    "permalink": "/docs/scs-docs/"
+  },
+  "next": {
+    "title": "Collaboration",
+    "permalink": "/docs/scs-docs/Contributor-Docs/collaboration"
+  }
+}

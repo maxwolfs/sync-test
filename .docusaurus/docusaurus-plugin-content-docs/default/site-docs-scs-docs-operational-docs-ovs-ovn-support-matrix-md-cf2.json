@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Operational-Docs/ovs-ovn-support-matrix",
+  "id": "scs-docs/Operational-Docs/ovs-ovn-support-matrix",
+  "title": "ovs-ovn-support-matrix",
+  "description": "Neutron traditional OVS vs  Neutron OVN plugin",
+  "source": "@site/docs/scs-docs/Operational-Docs/ovs-ovn-support-matrix.md",
+  "sourceDirName": "scs-docs/Operational-Docs",
+  "slug": "/scs-docs/Operational-Docs/ovs-ovn-support-matrix",
+  "permalink": "/docs/scs-docs/Operational-Docs/ovs-ovn-support-matrix",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Operational-Docs/ovs-ovn-support-matrix.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Integrating Alertmanager",
+    "permalink": "/docs/scs-docs/Operational-Docs/integrating-alertmanager"
+  },
+  "next": {
+    "title": "How to ensure human readable prometheus job instance names in Grafana dashboard",
+    "permalink": "/docs/scs-docs/Operational-Docs/scrape-job-instance-naming"
+  }
+}

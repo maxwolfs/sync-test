@@ -1,0 +1,29 @@
+{
+  "unversionedId": "scs-docs/Design-Docs/Release-Numbering-Scheme",
+  "id": "scs-docs/Design-Docs/Release-Numbering-Scheme",
+  "title": "Numbering scheme of the release versions",
+  "description": "Numbering scheme of the releases versions",
+  "source": "@site/docs/scs-docs/Design-Docs/Release-Numbering-Scheme.md",
+  "sourceDirName": "scs-docs/Design-Docs",
+  "slug": "/scs-docs/Design-Docs/Release-Numbering-Scheme",
+  "permalink": "/docs/scs-docs/Design-Docs/Release-Numbering-Scheme",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Design-Docs/Release-Numbering-Scheme.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Numbering scheme of the release versions",
+    "version": "v1",
+    "authors": "Christian Berendt, Ralf Heiringhoff",
+    "state": "Draft"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Procuring Open Source Projects",
+    "permalink": "/docs/scs-docs/Design-Docs/OSS-Health"
+  },
+  "next": {
+    "title": "SCS Releases",
+    "permalink": "/docs/scs-docs/Design-Docs/Release-Policies"
+  }
+}

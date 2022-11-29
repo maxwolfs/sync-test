@@ -1,22 +1,32 @@
 [
   {
-    "label": "facebook",
-    "permalink": "/blog/tags/facebook",
-    "count": 1
+    "label": "community",
+    "permalink": "/blog/tags/community",
+    "count": 2
   },
   {
     "label": "hello",
     "permalink": "/blog/tags/hello",
+    "count": 3
+  },
+  {
+    "label": "documentation",
+    "permalink": "/blog/tags/documentation",
     "count": 2
   },
   {
-    "label": "docusaurus",
-    "permalink": "/blog/tags/docusaurus",
-    "count": 4
+    "label": "scs",
+    "permalink": "/blog/tags/scs",
+    "count": 1
   },
   {
-    "label": "hola",
-    "permalink": "/blog/tags/hola",
+    "label": "guide",
+    "permalink": "/blog/tags/guide",
+    "count": 1
+  },
+  {
+    "label": "howto",
+    "permalink": "/blog/tags/howto",
     "count": 1
   }
 ]

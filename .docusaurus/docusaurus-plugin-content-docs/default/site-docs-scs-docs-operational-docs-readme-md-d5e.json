@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Operational-Docs/README",
+  "id": "scs-docs/Operational-Docs/README",
+  "title": "Operational-Docs",
+  "description": "Docs about how to best run SCS environments. Includes RCAs.",
+  "source": "@site/docs/scs-docs/Operational-Docs/README.md",
+  "sourceDirName": "scs-docs/Operational-Docs",
+  "slug": "/scs-docs/Operational-Docs/",
+  "permalink": "/docs/scs-docs/Operational-Docs/",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Operational-Docs/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SCS Glossary",
+    "permalink": "/docs/scs-docs/GLOSSARY"
+  },
+  "next": {
+    "title": "Integrating Alertmanager",
+    "permalink": "/docs/scs-docs/Operational-Docs/integrating-alertmanager"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Standards/scs-0001-v1-sovereign-cloud-standards",
+  "id": "scs-docs/Standards/scs-0001-v1-sovereign-cloud-standards",
+  "title": "Introduction",
+  "description": "The Sovereign Cloud Stack (SCS) provides standards",
+  "source": "@site/docs/scs-docs/Standards/scs-0001-v1-sovereign-cloud-standards.md",
+  "sourceDirName": "scs-docs/Standards",
+  "slug": "/scs-docs/Standards/scs-0001-v1-sovereign-cloud-standards",
+  "permalink": "/docs/scs-docs/Standards/scs-0001-v1-sovereign-cloud-standards",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Standards/scs-0001-v1-sovereign-cloud-standards.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "type": "Procedural",
+    "status": "Draft",
+    "track": "Global"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Release Notes for SCS Release X",
+    "permalink": "/docs/scs-docs/Release-Notes/ReleaseX"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/README",
+  "id": "scs-docs/README",
+  "title": "SCS Documentation",
+  "description": "Creative Commons Attribution-ShareAlike 4.0 International",
+  "source": "@site/docs/scs-docs/README.md",
+  "sourceDirName": "scs-docs",
+  "slug": "/scs-docs/",
+  "permalink": "/docs/scs-docs/",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SCS Documentation Collection",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Community",
+    "permalink": "/docs/scs-docs/Contributor-Docs/"
+  }
+}

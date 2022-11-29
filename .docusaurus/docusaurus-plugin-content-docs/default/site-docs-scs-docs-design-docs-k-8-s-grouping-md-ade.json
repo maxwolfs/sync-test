@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Design-Docs/k8s/GROUPING",
+  "id": "scs-docs/Design-Docs/k8s/GROUPING",
+  "title": "Grouping of repositories on the CI dashboard",
+  "description": "Grouping of repositories on the CI dashboard should be implemented using Github repository \"topics\". The update script will read topics from the Github API and will group the repositories accordingly.",
+  "source": "@site/docs/scs-docs/Design-Docs/k8s/GROUPING.md",
+  "sourceDirName": "scs-docs/Design-Docs/k8s",
+  "slug": "/scs-docs/Design-Docs/k8s/GROUPING",
+  "permalink": "/docs/scs-docs/Design-Docs/k8s/GROUPING",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Design-Docs/k8s/GROUPING.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "K8s manifest summary",
+    "permalink": "/docs/scs-docs/Design-Docs/k8s/"
+  },
+  "next": {
+    "title": "SCS Monitoring",
+    "permalink": "/docs/scs-docs/Design-Docs/monitoring"
+  }
+}

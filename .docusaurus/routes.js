@@ -39,7 +39,7 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '183'),
+    component: ComponentCreator('/blog', 'ebb'),
     exact: true
   },
   {
@@ -49,17 +49,17 @@ export default [
   },
   {
     path: '/blog/first-blog-post',
-    component: ComponentCreator('/blog/first-blog-post', '83b'),
+    component: ComponentCreator('/blog/first-blog-post', '786'),
     exact: true
   },
   {
     path: '/blog/long-blog-post',
-    component: ComponentCreator('/blog/long-blog-post', 'fc1'),
+    component: ComponentCreator('/blog/long-blog-post', '9c3'),
     exact: true
   },
   {
     path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post', '28f'),
+    component: ComponentCreator('/blog/mdx-blog-post', '015'),
     exact: true
   },
   {
@@ -68,28 +68,38 @@ export default [
     exact: true
   },
   {
-    path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus', 'f47'),
+    path: '/blog/tags/community',
+    component: ComponentCreator('/blog/tags/community', 'a48'),
     exact: true
   },
   {
-    path: '/blog/tags/facebook',
-    component: ComponentCreator('/blog/tags/facebook', '7e2'),
+    path: '/blog/tags/documentation',
+    component: ComponentCreator('/blog/tags/documentation', '1be'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/guide',
+    component: ComponentCreator('/blog/tags/guide', '3a4'),
     exact: true
   },
   {
     path: '/blog/tags/hello',
-    component: ComponentCreator('/blog/tags/hello', 'e8f'),
+    component: ComponentCreator('/blog/tags/hello', 'b9c'),
     exact: true
   },
   {
-    path: '/blog/tags/hola',
-    component: ComponentCreator('/blog/tags/hola', 'bd7'),
+    path: '/blog/tags/howto',
+    component: ComponentCreator('/blog/tags/howto', 'd57'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/scs',
+    component: ComponentCreator('/blog/tags/scs', '3a8'),
     exact: true
   },
   {
     path: '/blog/welcome',
-    component: ComponentCreator('/blog/welcome', 'a74'),
+    component: ComponentCreator('/blog/welcome', '2d4'),
     exact: true
   },
   {

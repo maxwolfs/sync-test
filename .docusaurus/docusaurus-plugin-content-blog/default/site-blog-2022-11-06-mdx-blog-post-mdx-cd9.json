@@ -1,0 +1,54 @@
+{
+  "permalink": "/blog/mdx-blog-post",
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2022-11-06-mdx-blog-post.mdx",
+  "source": "@site/blog/2022-11-06-mdx-blog-post.mdx",
+  "title": "MDX Blog Post",
+  "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
+  "date": "2022-11-06T00:00:00.000Z",
+  "formattedDate": "November 6, 2022",
+  "tags": [
+    {
+      "label": "hello",
+      "permalink": "/blog/tags/hello"
+    },
+    {
+      "label": "scs",
+      "permalink": "/blog/tags/scs"
+    },
+    {
+      "label": "guide",
+      "permalink": "/blog/tags/guide"
+    }
+  ],
+  "readingTime": 0.175,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Kurt Garloff",
+      "title": "CEO @ SCS",
+      "url": "https://github.com/garloff",
+      "imageURL": "https://github.com/garloff.png",
+      "key": "garloff"
+    }
+  ],
+  "frontMatter": {
+    "slug": "mdx-blog-post",
+    "title": "MDX Blog Post",
+    "authors": [
+      "garloff"
+    ],
+    "tags": [
+      "hello",
+      "scs",
+      "guide"
+    ]
+  },
+  "prevItem": {
+    "title": "Welcome",
+    "permalink": "/blog/welcome"
+  },
+  "nextItem": {
+    "title": "Long Blog Post",
+    "permalink": "/blog/long-blog-post"
+  }
+}

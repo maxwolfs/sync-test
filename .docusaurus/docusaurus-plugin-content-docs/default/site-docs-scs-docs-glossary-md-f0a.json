@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/GLOSSARY",
+  "id": "scs-docs/GLOSSARY",
+  "title": "SCS Glossary",
+  "description": "This file serves as the central glossary within SCS. It is intended to clearly",
+  "source": "@site/docs/scs-docs/GLOSSARY.md",
+  "sourceDirName": "scs-docs",
+  "slug": "/scs-docs/GLOSSARY",
+  "permalink": "/docs/scs-docs/GLOSSARY",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/GLOSSARY.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Objective",
+    "permalink": "/docs/scs-docs/Design-Docs/terms_and_roles_identity_and_access_management"
+  },
+  "next": {
+    "title": "Operational-Docs",
+    "permalink": "/docs/scs-docs/Operational-Docs/"
+  }
+}

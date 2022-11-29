@@ -1,0 +1,30 @@
+{
+  "unversionedId": "scs-docs/Design-Docs/Image-Properties-Spec",
+  "id": "scs-docs/Design-Docs/Image-Properties-Spec",
+  "title": "SCS Image Metadata Proposal",
+  "description": "SCS Image Metadata Standard SCS",
+  "source": "@site/docs/scs-docs/Design-Docs/Image-Properties-Spec.md",
+  "sourceDirName": "scs-docs/Design-Docs",
+  "slug": "/scs-docs/Design-Docs/Image-Properties-Spec",
+  "permalink": "/docs/scs-docs/Design-Docs/Image-Properties-Spec",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Design-Docs/Image-Properties-Spec.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "SCS Image Metadata Proposal",
+    "version": "2022-09-15-001",
+    "authors": "Kurt Garloff, Christian Berendt, Felix Kronlage-Dammers, Mathias Fechner, Ralf Heiringhoff",
+    "effective-date": "2022-10-31T00:00:00.000Z",
+    "state": "Released (v1.0)"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Identity Federation in SCS",
+    "permalink": "/docs/scs-docs/Design-Docs/IAM-federation/keystone-keycloak-federation"
+  },
+  "next": {
+    "title": "Procuring Open Source Projects",
+    "permalink": "/docs/scs-docs/Design-Docs/OSS-Health"
+  }
+}

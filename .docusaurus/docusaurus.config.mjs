@@ -4,15 +4,15 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "My Site",
-  "tagline": "Dinosaurs are cool",
-  "url": "https://your-docusaurus-test-site.com",
+  "title": "SCS Docs",
+  "tagline": "Putting users and providers in control.",
+  "url": "https://scsdocs.com",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
+  "organizationName": "SovereignCloudStack",
+  "projectName": "Docs",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -27,7 +27,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/maxwolfs/dev/sync-test/sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/"
         },
         "blog": {
           "showReadingTime": true,
@@ -41,7 +41,7 @@ export default {
   ],
   "themeConfig": {
     "navbar": {
-      "title": "My Site",
+      "title": "",
       "logo": {
         "alt": "My Site Logo",
         "src": "img/logo.svg"
@@ -51,7 +51,7 @@ export default {
           "type": "doc",
           "docId": "intro",
           "position": "left",
-          "label": "Tutorial"
+          "label": "Docs"
         },
         {
           "to": "/blog",
@@ -59,7 +59,7 @@ export default {
           "position": "left"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/SovereignCloudStack/Docs",
           "label": "GitHub",
           "position": "right"
         }
@@ -73,7 +73,7 @@ export default {
           "title": "Docs",
           "items": [
             {
-              "label": "Tutorial",
+              "label": "Contribute",
               "to": "/docs/intro"
             }
           ]
@@ -82,16 +82,12 @@ export default {
           "title": "Community",
           "items": [
             {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
+              "label": "Matrix",
+              "href": "https://matrix.to/#/!TiDqlLmEUaXqTemaLc:matrix.org?via=matrix.org"
             },
             {
               "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
+              "href": "https://twitter.com/scs_osballiance"
             }
           ]
         },
@@ -104,12 +100,12 @@ export default {
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/SovereignCloudStack/Docs"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2022 My Project, Inc. Built with Docusaurus."
+      "copyright": "Sovereign Cloud Stack, SCS and the logo are registered trademarks of the Open Source Business Alliance e.V. — Other trademarks are property of their respective owners."
     },
     "prism": {
       "theme": {

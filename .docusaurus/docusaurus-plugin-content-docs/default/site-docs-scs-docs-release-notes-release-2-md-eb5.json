@@ -1,0 +1,24 @@
+{
+  "unversionedId": "scs-docs/Release-Notes/Release2",
+  "id": "scs-docs/Release-Notes/Release2",
+  "title": "Release Notes for SCS Release 2",
+  "description": "(Release Date: 2022-03-23)",
+  "source": "@site/docs/scs-docs/Release-Notes/Release2.md",
+  "sourceDirName": "scs-docs/Release-Notes",
+  "slug": "/scs-docs/Release-Notes/Release2",
+  "permalink": "/docs/scs-docs/Release-Notes/Release2",
+  "draft": false,
+  "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/docs/scs-docs/Release-Notes/Release2.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Release Notes for SCS Release 1",
+    "permalink": "/docs/scs-docs/Release-Notes/Release1"
+  },
+  "next": {
+    "title": "Release Notes for SCS Release 3",
+    "permalink": "/docs/scs-docs/Release-Notes/Release3"
+  }
+}

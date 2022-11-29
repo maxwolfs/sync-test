@@ -1,0 +1,43 @@
+{
+  "permalink": "/blog/first-blog-post",
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2022-10-28-first-blog-post.md",
+  "source": "@site/blog/2022-10-28-first-blog-post.md",
+  "title": "First Blog Post",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
+  "date": "2022-10-28T00:00:00.000Z",
+  "formattedDate": "October 28, 2022",
+  "tags": [
+    {
+      "label": "community",
+      "permalink": "/blog/tags/community"
+    },
+    {
+      "label": "howto",
+      "permalink": "/blog/tags/howto"
+    }
+  ],
+  "readingTime": 0.12,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Eduard Itrich",
+      "title": "Community Manager @ SCS",
+      "url": "https://github.com/itrich",
+      "imageURL": "https://github.com/itrich.png",
+      "key": "itrich"
+    }
+  ],
+  "frontMatter": {
+    "slug": "first-blog-post",
+    "title": "First Blog Post",
+    "authors": "itrich",
+    "tags": [
+      "community",
+      "howto"
+    ]
+  },
+  "prevItem": {
+    "title": "Long Blog Post",
+    "permalink": "/blog/long-blog-post"
+  }
+}
