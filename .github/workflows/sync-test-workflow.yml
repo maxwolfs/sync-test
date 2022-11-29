@@ -28,7 +28,7 @@ jobs:
       matrix: ${{ steps.yaml-data.outputs.data }}
 
   sync_repos:
-    needs: get-repos-list
+    needs: provide_repos_json
     runs-on: ubuntu-latest
     strategy:
       matrix:
