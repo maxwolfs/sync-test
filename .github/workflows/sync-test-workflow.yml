@@ -53,7 +53,7 @@ jobs:
 
       - name: create saurus subdirectory
         run: |
-          mkdir $(pwd)/docs/testbed || true
+          mkdir $(pwd)/docs/${{matrix.repos.name}} || true
 
       - name: copy docs content from A to B
         run: |
