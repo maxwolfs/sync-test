@@ -1,4 +1,4 @@
 repos:
-  repo1: link1
-  repo2: link2
-  repo3: link3
+  openstack-image-manager: https://github.com/osism/openstack-image-manager.git
+  testbed: https://github.com/osism/testbed.git
+  scs-docs: https://github.com/SovereignCloudStack/Docs.git
