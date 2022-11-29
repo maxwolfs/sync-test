@@ -36,9 +36,6 @@ jobs:
         run: |
           echo ${{matrix.repos.name}}
           printf $(pwd)
-
-      - name: Checkout the saurus repo (B)
-        uses: actions/checkout@v3
   
       - name: Clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
