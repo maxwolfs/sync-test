@@ -67,13 +67,6 @@ jobs:
         run: |
           rm -rf $(pwd)/repo_to_be_edited/
 
-  commit_changes:
-    needs: sync_repos
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the saurus repo (B)
-        uses: actions/checkout@v3
-        
       - name: commit and push B
         uses: EndBug/add-and-commit@v9
         with:
@@ -83,6 +76,8 @@ jobs:
           message: "distillate"
           push: true
           add: "docs"
+
+
 
 
 
