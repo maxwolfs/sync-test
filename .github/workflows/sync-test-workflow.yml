@@ -7,8 +7,7 @@ name: synchronize repo test
     branches:
       - main
 
-  distill:
-    needs: job2
+  job:
     runs-on: ubuntu-latest
     steps:
       - name: Clone the saurus repo (B)
