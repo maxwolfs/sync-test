@@ -22,7 +22,10 @@ jobs:
           key-path: '["repos"]'
 
       - name: Set Matrix
-        run: echo "${{ steps.yaml-data.outputs.data }}"
+        run: |
+          REPOS=$(echo "${{ steps.yaml-data.outputs.data }}" | sed 's/ //g')
+          echo "::set-output name=matrix::$REPOS"
+
 
     outputs:
       matrix: ${{ steps.yaml-data.outputs.data }}
