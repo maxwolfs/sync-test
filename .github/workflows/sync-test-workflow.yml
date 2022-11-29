@@ -28,10 +28,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix: 
-        repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
+        repos: ${{fromJson(needs.provide_repos_json.outputs.matrix)}}
     steps: 
-      - name: echo repos
-        run: echo "${{fromJson(needs.provide_repos_json.outputs.matrix)}}"
+      - name: set repos
+        run: |
+          REPOS=${{fromJson(needs.provide_repos_json.outputs.matrix)}}
+          echo $REPOS
 
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
