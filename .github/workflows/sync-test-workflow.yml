@@ -1,8 +1,69 @@
 ---
-name: syncronize repo test
+name: synchronize repo test
 
 "on":
   workflow_dispatch:
   push:
     branches:
       - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - id: set-matrix
+        run: echo "matrix={\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}" >> $GITHUB_OUTPUT
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJSON(needs.job1.outputs.matrix) }}
+    steps:
+      - run: |
+          echo matrix
+
+  job3:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the saurus repo (B)
+        uses: actions/checkout@v3
+  
+      - name: Clone repo A which is about to be synchronized
+        uses: sudosubin/git-clone-action@v1.0.1
+        with:
+          repository: 'SovereignCloudStack/Docs'
+          path: 'repo_to_be_edited'
+
+      - name: remove git folders from A
+        run: |
+          rm -rf $(pwd)/repo_to_be_edited/.git
+
+      - name: remove README.md files from A
+        run: |
+          find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
+
+      - name: create saurus subdirectory
+        run: |
+          mkdir $(pwd)/docs/testbed || true
+
+      - name: copy docs content from A to B
+        run: |
+          cp -r $(pwd)/repo_to_be_edited/docs/* $(pwd)/docs/testbed
+          
+      - name: remove repo A
+        run: |
+          rm -rf $(pwd)/repo_to_be_edited/
+
+      - name: commit and push B
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: 'bot@SovereignCloudStack'
+          committer_name: SovereignCloudStack Bot
+          commit: --signoff
+          message: "distillate"
+          push: true
+          add: "docs"
