@@ -27,7 +27,7 @@ jobs:
           echo "${{ matrix.value }}"
 
   job3:
-    needs: job1
+    needs: job2
     runs-on: ubuntu-latest
     steps:
       - name: Clone the saurus repo (B)
