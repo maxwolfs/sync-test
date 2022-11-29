@@ -8,65 +8,62 @@ name: synchronize repo test
       - main
 
 jobs:
-  job1:
+  test-yaml-reader:
     runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    name: Test read-yaml
     steps:
-      - id: set-matrix
-        run: echo "matrix={\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
+      - uses: actions/checkout@v1
 
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
-    steps:
-      - id: step1
-        run: echo '::set-output name=json::{"a":1}'
-        if: false
-      - run: echo $A
-        env:
-          A: ${{ steps.step1.outputs.json && fromJSON(steps.step1.outputs.json).a }}
-        if: false
+      - name: Run read-yaml action
+        id: yaml-data
+        uses: jbutcher5/read-yaml@main      # You may wish to replace main with a version tag such as '1.6' etc.
+        with:
+          file: './action.yml'          # File to read from
+          key-path: '["runs", "using"]' # Access the runs key then the using key and retuns the value.
 
-  job3:
-    needs: job2
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone the saurus repo (B)
-        uses: actions/checkout@v3
+      - name: Display read-yaml output
+        run: echo "${{ steps.yaml-data.outputs.data }}"
+
+
+  # distill:
+  #   needs: job2
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Clone the saurus repo (B)
+  #       uses: actions/checkout@v3
   
-      - name: Clone repo A which is about to be synchronized
-        uses: sudosubin/git-clone-action@v1.0.1
-        with:
-          repository: 'SovereignCloudStack/Docs'
-          path: 'repo_to_be_edited'
+  #     - name: Clone repo A which is about to be synchronized
+  #       uses: sudosubin/git-clone-action@v1.0.1
+  #       with:
+  #         repository: 'SovereignCloudStack/Docs'
+  #         path: 'repo_to_be_edited'
 
-      - name: remove git folders from A
-        run: |
-          rm -rf $(pwd)/repo_to_be_edited/.git
+  #     - name: remove git folders from A
+  #       run: |
+  #         rm -rf $(pwd)/repo_to_be_edited/.git
 
-      - name: remove README.md files from A
-        run: |
-          find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
+  #     - name: remove README.md files from A
+  #       run: |
+  #         find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
 
-      - name: create saurus subdirectory
-        run: |
-          mkdir $(pwd)/docs/testbed || true
+  #     - name: create saurus subdirectory
+  #       run: |
+  #         mkdir $(pwd)/docs/testbed || true
 
-      - name: copy docs content from A to B
-        run: |
-          cp -r $(pwd)/repo_to_be_edited/docs/* $(pwd)/docs/testbed
+  #     - name: copy docs content from A to B
+  #       run: |
+  #         cp -r $(pwd)/repo_to_be_edited/docs/* $(pwd)/docs/testbed
           
-      - name: remove repo A
-        run: |
-          rm -rf $(pwd)/repo_to_be_edited/
+  #     - name: remove repo A
+  #       run: |
+  #         rm -rf $(pwd)/repo_to_be_edited/
 
-      - name: commit and push B
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: 'bot@SovereignCloudStack'
-          committer_name: SovereignCloudStack Bot
-          commit: --signoff
-          message: "distillate"
-          push: true
-          add: "docs"
+  #     - name: commit and push B
+  #       uses: EndBug/add-and-commit@v9
+  #       with:
+  #         author_name: 'bot@SovereignCloudStack'
+  #         committer_name: SovereignCloudStack Bot
+  #         commit: --signoff
+  #         message: "distillate"
+  #         push: true
+  #         add: "docs"
