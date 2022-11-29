@@ -26,7 +26,7 @@ jobs:
 
   sync-repos:
     needs: get-repos
-    runs-ons: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         repos: ${{ fromJson(needs.get-repos-json.outputs.matrix) }}
