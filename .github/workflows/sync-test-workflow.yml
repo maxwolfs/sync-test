@@ -40,36 +40,36 @@ jobs:
       - name: Clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
         with:
-          repository: ${{matrix.repos.name}}
-          path: ${{matrix.repos.link}}
+          repository: maxwolfs/${{matrix.repos.name}}
+          path: 'repo_to_be_edited'
 
       - name: remove git folders from A
         run: |
-          rm -rf $(pwd)/${{matrix.repos.name}}/.git
+          rm -rf $(pwd)/repo_to_be_edited/.git
 
       - name: remove README.md files from A
         run: |
-          find $(pwd)/${{matrix.repos.name}} -name "README.md" | xargs rm -f
+          find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
 
       - name: create saurus subdirectory
         run: |
-          mkdir $(pwd)/docs/${{matrix.repos.name}} || true
+          mkdir $(pwd)/docs/testbed || true
 
       - name: copy docs content from A to B
         run: |
-          cp -r $(pwd)/${{matrix.repos.name}}/docs/* $(pwd)/docs/${{matrix.repos.name}}
+          cp -r $(pwd)/repo_to_be_edited/docs/* $(pwd)/docs/${{matrix.repos.name}}  
           
       - name: remove repo A
         run: |
-          rm -rf $(pwd)/${{matrix.repos.name}}/
+          rm -rf $(pwd)/repo_to_be_edited/
 
       - name: commit and push B
         uses: EndBug/add-and-commit@v9
         with:
           author_name: 'bot@maxwolfs'
-          committer_name: maxwolfsorg Bot
+          committer_name: Action Bot
           commit: --signoff
-          message: "distill"
+          message: "distillate"
           push: true
           add: "docs"
 
