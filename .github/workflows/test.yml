@@ -18,9 +18,9 @@ jobs:
 
     - id: set-matrix
       run: |
-        JSON=$(cat ././repos.json)
-        echo "::set-output name=matrix::${JSON//'%'/'%25'}"
-        echo "${{ steps.set-matrix.outputs.matrix }}"
+        JSON=$(cat ././repos.json | sed 's/ //g')
+        printf "::set-output name=matrix::${JSON//'%'/'%25'}"
+        printf "${{ steps.set-matrix.outputs.matrix }}"
 
   job2:
     needs: job1
