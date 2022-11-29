@@ -20,7 +20,7 @@ jobs:
       uses: sergeysova/jq-action@v2
       id: json
       with: 
-        cmd: 'jq -s -c JSON=$(cat ././repos.json)'
+        cmd: 'jq -s -c ././repos.json'
 
     - id: set-matrix
       run: |
