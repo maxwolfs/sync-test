@@ -21,11 +21,14 @@ jobs:
           file: './repos.yml'          
           key-path: '["repos"]'
 
-      - name: Display read-yaml output
-        run: echo "${{ steps.yaml-data.outputs.data }}"
+      - name: Set name of repo
+        matrix: 
+          repos: ${{ steps.yaml-data.outputs.data }}
+        run: echo "${{ matrix.repos }}"
 
       - name: test repo
-        run: echo "${{ steps.yaml-data.outputs.data.openstack-image-manager }}"
+        # run: echo "${{ steps.yaml-data.outputs.data.openstack-image-manager }}"
+        run: echo "${{ matrix.repos }}"
   
       # - name: Clone repo A which is about to be synchronized
       #   uses: sudosubin/git-clone-action@v1.0.1
