@@ -8,7 +8,7 @@ name: synchronize repo test
       - main
 
 jobs:
-  get-repos-json:
+  get-repos-list:
     runs-on: ubuntu-latest
     steps:
       - name: Run read-yaml action
@@ -25,7 +25,7 @@ jobs:
       matrix: ${{ steps.yaml-data.outputs.data.repos }}
 
   sync-repos:
-    needs: get-repos
+    needs: get-repos-list
     runs-on: ubuntu-latest
     strategy:
       matrix:
