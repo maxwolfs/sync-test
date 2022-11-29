@@ -55,7 +55,7 @@ jobs:
         run: |
           mkdir $(pwd)/docs/${{matrix.repos.name}} || true
           printf $(pwd)
-          printf ls
+          printf "ls"
 
       - name: copy docs content from A to B
         run: |
