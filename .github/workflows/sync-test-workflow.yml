@@ -8,12 +8,9 @@ name: synchronize repo test
       - main
 
 jobs:
-  sync-repos:
+  get-repos-json:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the saurus repo (B)
-        uses: actions/checkout@v3
-
       - name: Run read-yaml action
         id: yaml-data
         uses: jbutcher5/read-yaml@main      
@@ -21,14 +18,20 @@ jobs:
           file: './repos.yml'          
           key-path: '["repos"]'
 
-      - name: Set name of repo
+      - name: Set Matrix
         strategy:
           matrix: 
             repos: ${{ steps.yaml-data.outputs.data }}
         run: echo "${{ matrix.repos }}"
 
-      - name: test repo
-        # run: echo "${{ steps.yaml-data.outputs.data.openstack-image-manager }}"
+  sync-repos:
+    needs: get-repos
+    runs-ons: ubuntu-latest
+    strategy:
+      matrix:
+        repos: ${{ fromJson(needs.get-repos-json.outputs.matrix) }}
+    steps: 
+      - name: echo repos
         run: echo "${{ matrix.repos }}"
   
       # - name: Clone repo A which is about to be synchronized
