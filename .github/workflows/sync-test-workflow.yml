@@ -8,7 +8,7 @@ name: synchronize repo test
       - main
 
 jobs:
-  get-repos-list:
+  provide_repos_json:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the saurus repo (B)
@@ -22,17 +22,18 @@ jobs:
           key-path: '["repos"]'
 
       - name: Set Matrix
-        run: echo "${{ matrix.repos }}"
+        run: echo "${{ steps.yaml-data.outputs.data }}"
 
     outputs:
-      matrix: ${{ steps.yaml-data.outputs.data.repos }}
+      matrix: ${{ steps.yaml-data.outputs.data }}
 
-  sync-repos:
+  sync_repos:
     needs: get-repos-list
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        repos: ${{ fromJson(needs.get-repos-json.outputs.matrix) }}
+        repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
+
     steps: 
       - name: echo repos
         run: echo "${{ matrix.repos }}"
