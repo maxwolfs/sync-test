@@ -49,27 +49,24 @@ jobs:
       - name: remove git folders from A
         run: |
           rm -rf $(pwd)/repo_to_be_edited/.git
-          printf $(pwd)
 
       - name: remove README.md files from A
         run: |
           find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
-          printf $(pwd)
 
       - name: create saurus subdirectory
         run: |
           mkdir $(pwd)/docs/${{matrix.repos.name}} || true
-          printf $(pwd)
+          printf ls $(pwd)
 
       - name: copy docs content from A to B
         run: |
           cp -r $(pwd)/repo_to_be_edited/docs/* $(pwd)/docs/${{matrix.repos.name}}
-          printf $(pwd)  
+          
           
       - name: remove repo A
         run: |
           rm -rf $(pwd)/repo_to_be_edited/
-          printf $(pwd)
 
       - name: commit and push B
         uses: EndBug/add-and-commit@v9
