@@ -19,7 +19,7 @@ jobs:
           key-path: '["repos"]'
 
       - name: Set Matrix
-        strategy:
+        outputs:
           matrix: 
             repos: ${{ steps.yaml-data.outputs.data }}
         run: echo "${{ matrix.repos }}"
