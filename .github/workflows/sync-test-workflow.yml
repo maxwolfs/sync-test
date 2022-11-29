@@ -71,6 +71,9 @@ jobs:
     needs: sync_repos
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the saurus repo (B)
+        uses: actions/checkout@v3
+        
       - name: commit and push B
         uses: EndBug/add-and-commit@v9
         with:
