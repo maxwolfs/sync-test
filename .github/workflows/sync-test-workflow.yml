@@ -30,8 +30,8 @@ jobs:
         repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
       - name: Checkout the saurus repo (B)
-        uses: actions/checkout@v3
-        
+        uses: actions/checkout@v2
+
       - name: set repos
         run: |
           echo ${{matrix.repos.name}}
