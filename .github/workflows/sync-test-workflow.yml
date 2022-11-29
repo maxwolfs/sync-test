@@ -8,26 +8,30 @@ name: synchronize repo test
       - main
 
 jobs:
-  provide_repos_json:
+  provide_repos_list:
     runs-on: ubuntu-latest
     outputs:
-      matrix: $REPOS
+      matrix: ${{ steps.yaml-data.outputs.data }}
     steps:
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
 
+      - name: Run read-yaml action
+        id: yaml-data
+        uses: jbutcher5/read-yaml@main      
+        with:
+          file: './repos.yml'          
+          key-path: '["repos"]'
+
       - name: Set Matrix
-        run: |
-          REPOS=$(echo $(cat ././repos.json) | sed 's/ //g' )
-          echo "::set-output name=matrix::$REPOS"
-          echo $REPOS
+        run: echo "${{ steps.yaml-data.outputs.data }}"
 
   sync_repos:
-    needs: provide_repos_json
+    needs: provide_repos_list
     runs-on: ubuntu-latest
     strategy:
       matrix: 
-        repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
+        repos: ${{ steps.provide_repos_json.outputs.matrix }}
     steps: 
       - name: set repos
         run: |
@@ -35,6 +39,36 @@ jobs:
 
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
+
+
+  # provide_repos_json:
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     matrix: $REPOS
+  #   steps:
+  #     - name: Checkout the saurus repo (B)
+  #       uses: actions/checkout@v3
+
+  #     - name: Set Matrix
+  #       run: |
+  #         REPOS=$(echo $(cat ././repos.json) | sed 's/ //g' )
+  #         echo "::set-output name=matrix::$REPOS"
+  #         echo $REPOS
+  #
+  # sync_repos:
+  #   needs: provide_repos_json
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix: 
+  #       repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
+  #   steps: 
+  #     - name: set repos
+  #       run: |
+  #         echo ${{matrix.repos.name}}
+
+  #     - name: Checkout the saurus repo (B)
+  #       uses: actions/checkout@v3
+
   
       # - name: Clone repo A which is about to be synchronized
       #   uses: sudosubin/git-clone-action@v1.0.1
