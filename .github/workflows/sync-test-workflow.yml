@@ -16,7 +16,7 @@ jobs:
 
       - name: Set Matrix
         run: |
-          REPOS=$(echo $(cat ../../repos.json) | sed 's/ //g' )
+          REPOS=$(echo $(cat ././repos.json) | sed 's/ //g' )
           echo "::set-output name=matrix::$REPOS"
           echo $REPOS
 
