@@ -15,8 +15,7 @@ jobs:
     steps:
       - id: set-matrix
         run: |
-        echo '::set-output name=value::[\"a\", \"b\", \"c\"]'
-
+          echo '::set-output name=value::[\"a\", \"b\", \"c\"]'
 
   job2:
     needs: job1
