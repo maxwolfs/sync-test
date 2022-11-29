@@ -1,5 +1,12 @@
-name: build
-on: push
+---
+name: json test
+
+"on":
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
 jobs:
   job1:
     runs-on: ubuntu-latest
