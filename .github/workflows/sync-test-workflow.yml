@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
+        run: echo $(pwd)
 
       - name: Set Matrix
         id: set-matrix
         run: |
           REPOS=$(echo $(cat ././repos.json) | sed 's/ //g' )
           echo "::set-output name=matrix::$REPOS"
-          echo $REPOS
   
   sync_repos:
     needs: provide_repos_json
@@ -47,17 +47,14 @@ jobs:
       - name: remove git folders from A
         run: |
           rm -rf $(pwd)/repo_to_be_edited/.git
-          printf $(pwd)
 
       - name: remove README.md files from A
         run: |
           find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
-          printf $(pwd)
 
       - name: create saurus subdirectory
         run: |
           mkdir $(pwd)/docs/${{matrix.repos.name}} || true
-          printf $(pwd)
 
       - name: copy docs content from A to B
         run: |
