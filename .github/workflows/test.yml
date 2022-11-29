@@ -16,9 +16,12 @@ jobs:
     - name: Checkout the saurus repo (B)
       uses: actions/checkout@v3
 
-    - name: serialize json
+    - name: Minify JSON
       id: json
-      run: cat ././repos.json | jq -s -c
+      uses: StefanEnsmann/Minify-JSON-Action@1.1.0
+      with:
+        input_file: ././repos.json
+        output_file: output.json
 
     - id: set-matrix
       run: |
