@@ -8,35 +8,44 @@ name: synchronize repo test
       - main
 
 jobs:
+  # provide_repos_json:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout the saurus repo (B)
+  #       uses: actions/checkout@v3
+
+  #     - name: Run read-yaml action
+  #       id: yaml-data
+  #       uses: jbutcher5/read-yaml@main      
+  #       with:
+  #         file: './repos.yml'          
+  #         key-path: '["repos"]'
+
+  #     - name: Set Matrix
+  #       run: echo "${{ steps.yaml-data.outputs.data }}"
+
+  #   outputs:
+  #     matrix: ${{ steps.yaml-data.outputs.data }}
+
   provide_repos_json:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the saurus repo (B)
-        uses: actions/checkout@v3
-
-      - name: Run read-yaml action
-        id: yaml-data
-        uses: jbutcher5/read-yaml@main      
-        with:
-          file: './repos.yml'          
-          key-path: '["repos"]'
-
-      - name: Set Matrix
-        run: echo "${{ steps.yaml-data.outputs.data }}"
-
     outputs:
-      matrix: ${{ steps.yaml-data.outputs.data }}
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+    - id: set-matrix
+      run: |
+        JSON=$(cat ./your.json)
+        echo "::set-output name=matrix::${JSON//'%'/'%25'}"
 
   sync_repos:
     needs: provide_repos_json
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
-
+      matrix: ${{fromJson(needs.job1.outputs.matrix)}}
+        # repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
       - name: echo repos
-        run: echo "${{ matrix.repos }}"
+        run: echo "${{fromJson(needs.job1.outputs.matrix)}}"
 
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
