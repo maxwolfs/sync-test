@@ -69,6 +69,8 @@ jobs:
 
   commit_changes:
     needs: sync_repos
+    runs-on: ubuntu-latest
+    steps:
       - name: commit and push B
         uses: EndBug/add-and-commit@v9
         with:
