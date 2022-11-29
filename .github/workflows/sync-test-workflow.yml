@@ -37,14 +37,12 @@ jobs:
 
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
-        run: printf $(pwd)
   
       - name: Clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
         with:
           repository: maxwolfs/${{matrix.repos.name}}
           path: 'repo_to_be_edited'
-        run: printf $(pwd)
 
       - name: remove git folders from A
         run: |
