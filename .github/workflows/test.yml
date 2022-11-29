@@ -22,8 +22,8 @@ jobs:
         JSON="${JSON//'%'/'%25'}"
         JSON="${JSON//$'\n'/'%0A'}"
         JSON="${JSON//$'\r'/'%0D'}"
-        printf "::set-output name=matrix::${JSON//'%'/'%25'}"
-        printf "${{ steps.set-matrix.outputs.matrix }}"
+        echo "::set-output name=matrix::${JSON//'%'/'%25'}"
+        echo "${{ steps.set-matrix.outputs.matrix }}"
 
   job2:
     needs: job1
