@@ -25,7 +25,7 @@ jobs:
 
     - id: set-matrix
       run: |
-        JSON=${steps.json.outputs.value}
+        JSON=${{ steps.json.outputs.value }}
         echo "::set-output name=matrix::${steps.json.outputs.value}"
         echo "$JSON"
 
