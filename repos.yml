@@ -1,7 +1,0 @@
-repos:
-  repo1:
-    name: testbed
-    link: https://github.com/osism/testbed.git
-  repo2:
-    name: openstack-image-manager
-    link: https://github.com/osism/openstack-image-manager.git
