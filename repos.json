@@ -1,11 +1,14 @@
 [
-  {
-    "repo1": "https://github.com/osism/openstack-image-manager.git"
-  },
-  {
-    "repo2": "https://github.com/osism/testbed.git"
-  },
-  {
-    "repo3": "https://github.com/SovereignCloudStack/Docs.git"
-  }
+    {
+        "name": "openstack-image-manager",
+        "link": "https://github.com/osism/openstack-image-manager.git"
+    },
+    {
+        "name": "testbed",
+        "repo2": "https://github.com/osism/testbed.git"
+    },
+    {
+        "name": "scs-docs",
+        "repo3": "https://github.com/SovereignCloudStack/Docs.git"
+    }
 ]
