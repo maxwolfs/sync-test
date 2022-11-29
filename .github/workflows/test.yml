@@ -1,38 +1,18 @@
----
-name: json test
-
-"on":
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
+name: build
+on: push
 jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-    - name: Checkout the saurus repo (B)
-      uses: actions/checkout@v3
-
-    - name: Minify JSON
-      id: json
-      uses: StefanEnsmann/Minify-JSON-Action@1.1.0
-      with:
-        input_file: ././repos.json
-        output_file: output.json
-
     - id: set-matrix
-      run: |
-        JSON=${{ steps.json.outputs.value }}
-        echo "::set-output name=matrix::${steps.json.outputs.value}"
-        echo "$JSON"
-
+      run: echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
   job2:
     needs: job1
     runs-on: ubuntu-latest
     strategy:
       matrix: ${{fromJson(needs.job1.outputs.matrix)}}
     steps:
-    - run: build
+    - run: echo ${{ matrix.project }}
+    - run: echo ${{ matrix.config }}
