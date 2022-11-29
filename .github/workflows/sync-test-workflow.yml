@@ -11,7 +11,7 @@ jobs:
   sync-repos:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone the saurus repo (B)
+      - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
 
       - name: Run read-yaml action
@@ -25,7 +25,7 @@ jobs:
         run: echo "${{ steps.yaml-data.outputs.data }}"
 
       - name: test repo
-        run: echo "${{ steps.yaml-data.outputs.data.openstack-image-manager }}"
+        run: echo "${{ steps.yaml-data.outputs.data[0] }}"
   
       # - name: Clone repo A which is about to be synchronized
       #   uses: sudosubin/git-clone-action@v1.0.1
