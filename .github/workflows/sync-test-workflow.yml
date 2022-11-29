@@ -27,8 +27,8 @@ jobs:
     needs: provide_repos_json
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{fromJson(needs.provide_repos_json.outputs.matrix)}}
-        # repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
+      matrix: 
+        repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
       - name: echo repos
         run: echo "${{fromJson(needs.provide_repos_json.outputs.matrix)}}"
