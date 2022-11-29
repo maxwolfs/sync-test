@@ -11,12 +11,13 @@ jobs:
   provide_repos_json:
     runs-on: ubuntu-latest
     outputs:
-      matrix: $REPOS
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout the saurus repo (B)
         uses: actions/checkout@v3
 
       - name: Set Matrix
+        id: set-matrix
         run: |
           REPOS=$(echo $(cat ././repos.json) | sed 's/ //g' )
           echo "::set-output name=matrix::$REPOS"
