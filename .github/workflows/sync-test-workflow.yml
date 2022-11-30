@@ -73,7 +73,7 @@ jobs:
           author_name: 'bot@maxwolfs'
           committer_name: Action Bot
           commit: --signoff
-          message: "distillate"
+          message: "distill"
           push: true
           pull: --rebase --autostash
           add: "docs"
