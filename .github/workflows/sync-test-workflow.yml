@@ -1,11 +1,11 @@
 ---
 name: synchronize repo test
 
-"on":
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+# "on":
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   provide_repos_json:
