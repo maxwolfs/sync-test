@@ -1,0 +1,10 @@
+[
+    {
+        "name": "openstack-image-manager",
+        "org": "maxwolfs"
+    },
+    {
+        "name": "testbed",
+        "org": "maxwolfs"
+    }
+]
