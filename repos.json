@@ -1,10 +1,12 @@
 [
     {
         "name": "openstack-image-manager",
+        "org": "maxwolfs",
         "link": "https://github.com/maxwolfs/openstack-image-manager.git"
     },
     {
         "name": "testbed",
+        "org": "maxwolfs",
         "link": "https://github.com/maxwolfs/testbed.git"
     }
 ]
