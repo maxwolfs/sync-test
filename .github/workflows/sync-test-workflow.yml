@@ -75,6 +75,7 @@ jobs:
           commit: --signoff
           message: "distillate"
           push: true
+          pull: --rebase
           add: "docs"
 
 
