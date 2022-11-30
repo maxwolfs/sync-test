@@ -4,7 +4,7 @@ name: synchronize repo test
 "on":
   push:
     paths:
-      - './docs.json'
+      - 'docs.json'
     branches:
       - main
 
