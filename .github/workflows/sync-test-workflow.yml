@@ -19,7 +19,7 @@ jobs:
       - name: Set Matrix
         id: set-matrix
         run: |
-          REPOS=$(echo $(cat ././repos.json) | sed 's/ //g' )
+          REPOS=$(echo $(cat ././docs.json) | sed 's/ //g' )
           echo "::set-output name=matrix::$REPOS"
   
   sync_repos:
