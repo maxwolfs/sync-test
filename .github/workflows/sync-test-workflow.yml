@@ -2,10 +2,11 @@
 name: synchronize repo test
 
 "on":
-  workflow_dispatch:
-#   push:
-#     branches:
-#       - main
+  push:
+    paths:
+      - './docs.json'
+    branches:
+      - main
 
 jobs:
   provide_repos_json:
