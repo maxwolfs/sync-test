@@ -12,10 +12,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup Node, install dependencies and build
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 16
+
+      - name: Install dependencies, build and commit to gh-pages branch
       - run: |
           npm ci
           npm run build
