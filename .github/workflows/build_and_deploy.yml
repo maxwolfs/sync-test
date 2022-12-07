@@ -33,4 +33,5 @@ jobs:
           message: "build"
           push: true
           pull: --rebase --autostash
+          add: "build"
 
