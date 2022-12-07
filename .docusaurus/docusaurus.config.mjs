@@ -26,7 +26,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/maxwolfs/dev/sync-test/sidebars.js",
+          "sidebarPath": "/home/runner/work/sync-test/sync-test/sidebars.js",
           "editUrl": "https://github.com/SovereignCloudStack/Docs/tree/main/"
         },
         "blog": {
@@ -34,7 +34,7 @@ export default {
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         "theme": {
-          "customCss": "/Users/maxwolfs/dev/sync-test/src/css/custom.css"
+          "customCss": "/home/runner/work/sync-test/sync-test/src/css/custom.css"
         }
       }
     ]
