@@ -18,7 +18,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies, build and commit to gh-pages branch
-      - run: |
+        run: |
           npm ci
           npm run build
           git config user.name github-actions
