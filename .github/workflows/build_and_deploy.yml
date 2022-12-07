@@ -1,0 +1,36 @@
+name: Build and Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - main  # Here source code branch is `main`, it could be other branch
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node, install dependencies and build
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run build
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with: 
+          ref: "gh-pages"
+
+      - name: Commit and push to gh-pages branch
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: 'bot@maxwolfs'
+          committer_name: Action Bot
+          commit: --signoff
+          message: "build"
+          push: true
+          pull: --rebase --autostash
+
