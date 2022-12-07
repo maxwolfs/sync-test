@@ -18,12 +18,12 @@ jobs:
           node-version: 16
       - run: npm install
       - run: npm run build
+      - run: cd build
 
       - name: Checkout Repository
         uses: actions/checkout@v3
         with: 
           ref: "gh-pages"
-          path: build
 
       - name: Commit and push to gh-pages branch
         uses: EndBug/add-and-commit@v9
@@ -34,4 +34,5 @@ jobs:
           message: "build"
           push: true
           pull: --rebase --autostash
+          add: "build"
 
