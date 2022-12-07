@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v3
         with: 
           ref: "gh-pages"
+          path: build
 
       - name: Commit and push to gh-pages branch
         uses: EndBug/add-and-commit@v9
@@ -33,5 +34,4 @@ jobs:
           message: "build"
           push: true
           pull: --rebase --autostash
-          add: "build"
 
