@@ -9,7 +9,7 @@ const config = {
   title: 'SCS Docs',
   tagline: 'Putting users and providers in control.',
   url: 'https://scsdocs.com',
-  baseUrl: '/',
+  baseUrl: '/sync-test',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
